@@ -4,8 +4,8 @@ set -e
 
 # Download the executable and the ISO
 echo Downloading minikube components
-[[ ! -f minikube ]] ||  URL=https://2020-08-17-cloud-native-bpf-workshop-public.s3.eu-central-1.amazonaws.com/minikube && curl -O $URL ;;
-[[ ! -f minikube.iso ]] || URL=https://2020-08-17-cloud-native-bpf-workshop-public.s3.eu-central-1.amazonaws.com/minikube.iso && curl -O $URL ;;
+[[ ! -f minikube ]] || URL=https://2020-08-17-cloud-native-bpf-workshop-public.s3.eu-central-1.amazonaws.com/minikube curl -O $URL
+[[ ! -f minikube.iso ]] || URL=https://2020-08-17-cloud-native-bpf-workshop-public.s3.eu-central-1.amazonaws.com/minikube.iso curl -O $URL
 
 # Verify that the sha256sums are correct
 echo Verifying downloaded components
